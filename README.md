@@ -1,2 +1,2 @@
 # Docker_Tutorial
-In this Docker tutorial, I will present how to create Docker images and containers, how to link an application with an API, and how to connect containers. 
+In this Docker tutorial, I will present how to create Docker images and containers, how to link an application with an API, and how to connect containersc. Docker is a powerful tool for containerization, which allows you to package your application and its dependencies into a self-contained unit that can run anywhere. In this tutorial, I will walk through the basics of Docker and show how to create and manage Docker images and containers, as well as how to connect and communicate between them
