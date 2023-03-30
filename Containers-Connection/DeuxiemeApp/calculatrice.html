@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Calculatrice </title>
+  </head>
+  <body>
+     <center>
+      <h1 class="title">Calculatrice
+        <h1>
+            <form method="post" action="/index">
+      <table>
+        <tr>
+          <td colspan="4" align="right" id="case">
+            <span id="calc-output"></span>
+          </td>
+        </tr>
+        <tr>
+            <input class="Enregistrer" type="submit" value="Enregistrer" id="button-sub"/>
+
+        </tr>
+
+     </table>
+    </form>
+     <table>
+       <tr>
+         <td>
+           <input class="number" type="button" value="1" id="button-1" onclick="btm(1)"/>
+         </td>
+         <td>
+           <input class="number" type="button" value="2" id="button-2" onclick="btm(2)"/>
+         </td>
+         <td>
+           <input class="number" type="button" value="3" id="button-3" onclick="btm(3)"/>
+         </td>
+         <td>
+           <input class="operator" type="button" value="C" id="button-C" onclick="btmClean()"/>
+         </td>
+       </tr>
+
+       <tr>
+         <td>
+           <input class="number" type="button" value="4" id="button-4" onclick="btm(4)"/>
+         </td>
+         <td>
+           <input class="number" type="button" value="5" id="button-5" onclick="btm(5)"/>
+         </td>
+         <td>
+           <input class="number" type="button" value="6" id="button-6" onclick="btm(6)"/>
+         </td>
+         <td>
+           <input class="operator" type="button" value="+" id="button-+" onclick="btmPlus()"/>
+         </td>
+       </tr>
+
+       <tr>
+         <td>
+           <input class="number" type="button" value="7" id="button-7" onclick="btm(7)"/>
+         </td>
+         <td>
+           <input class="number" type="button" value="8" id="button-8" onclick="btm(8)"/>
+         </td>
+         <td>
+           <input class="number" type="button" value="9" id="button-9" onclick="btm(9)"/>
+         </td>
+         <td>
+           <input class="operator" type="button" value="-" id="button--" onclick="btmLess()"/>
+         </td>
+       </tr>
+
+       <tr>
+         <td>
+           <input class="operator" type="button" value="x" id="button-*" onclick="btmMultiply()"/>
+         </td>
+         <td>
+           <input class="number"type="button" value="0" id="button-0" onclick="btm(0)"/>
+         </td>
+         <td>
+           <input class="operator" type="button" value="÷" id="button-/" onclick="btmDivision()"/>
+         </td>
+         <td>
+           <input class="operator" type="button" value="=" id="button-=" onclick="btmEgal()"/>
+         </td>
+       </tr>
+
+     </table>
+     
+
+     </center>
+
+  </body>
+</html>
+<script>
+
+    function btm(val) {
+         document.getElementById("calc-output").innerHTML += val;
+     }
+     function btmClean(){
+        document.getElementById("calc-output").innerHTML = "";
+     }
+     function btmPlus() {
+        document.getElementById("calc-output").innerHTML += "+";
+     }
+     function btmLess() {
+        document.getElementById("calc-output").innerHTML += "-";
+     }
+     function btmMultiply() {
+        document.getElementById("calc-output").innerHTML += "*";
+     }
+     function btmDivision() {
+        document.getElementById("calc-output").innerHTML += "/";
+     }
+
+     function btmEgal() {
+	      var egal = eval(document.getElementById('calc-output').innerHTML);
+	      document.getElementById('calc-output').innerHTML += "="+egal;
+      }
+      // function Enregistrer() {
+	    //   var egal = eval(document.getElementById('calc-output').innerHTML);
+	    //   document.getElementById('calc-output').innerHTML += "="+egal;
+      // }
+
+</script>
+<style>
+      .title{
+    font-size: 25px;
+    font-style: italic;
+    font-family: sans-serif;
+    color: #a85984;
+  }
+  #case{
+      height: 37px;
+      width: 200px;
+      border: 2px solid #a85984;
+      border-radius: 10px;
+  }
+
+  .number{
+      height: 50px;
+      width: 50px;
+      font-size: 25px;
+      color: white;
+      border: 2px solid #a85984;
+      border-radius: 10px;
+      background-color: #c98eaf;
+  }
+  .number:hover {
+    background-color: #953369;
+  }
+
+  .operator{
+      height: 50px;
+      width: 50px;
+      font-size: 25px;
+      color: white;
+      border: 2px solid #a85984;
+      border-radius: 10px;
+      background-color: #c98eaf;
+  }
+  .operator:hover{
+      background-color: #953369;
+  }
+
+  .Enregistrer{
+      height: 50px;
+      width: 210px;
+      font-size: 20px;
+      color: white;
+      border: 2px solid #a85984;
+      border-radius: 10px;
+      background-color: #c98eaf;
+  }
+  .operator:hover{
+      background-color: #953369;
+  }
+
+</style>
